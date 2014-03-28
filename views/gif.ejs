@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GIF Server</title>
+		<script type="text/javascript">
+			var nextImage = function() {
+				setTimeout(function() { location.reload(); }, <%= duration %>);
+			}
+		</script>
+	</head>
+	<body style="background-color:black;">
+	  	<img 
+	  		style="max-width:100%; max-height:100%; width:100%; height:auto;"
+	  		src="/<%= gif %>"
+	  		onload=nextImage()
+	  	/>
+	</body>
+</html>

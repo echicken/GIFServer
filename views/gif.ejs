@@ -23,8 +23,15 @@
 		  		onload="nextImage()"
 		  	/>
 		<span id="description"><%= gif.title %></span>
-		-
+		<br />
 		<span id="author"><%= gif.author %></span>
+		-
+		<% var d = new Date(gif.created * 1000).toUTCString(); %>
+		<span id="date"><%= d %></span>
+		<br />
+		<span id="attribution">
+			Origin: <a href="<%= gif.url %>"><%= gif.url %></a>
+		</span>
 		</div>
 	</body>
 </html>

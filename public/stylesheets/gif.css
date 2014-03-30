@@ -1,0 +1,52 @@
+body {
+	background-color: black;
+	color: white;
+	text-align : center;
+	font-family : arial, helvetica;
+}
+
+a {
+	text-decoration : none;
+	color : white;
+	background-color : black;
+}
+
+a:hover {
+	color : black;
+	background-color : white;
+}
+
+a:active {
+	color : white;
+	background-color : black;
+}
+
+#gif {
+	width : 95%;
+	height : 95%;
+	position : relative
+}
+
+#gif img { 
+	display : block;
+	margin : 0 auto;
+	width : auto;
+	height : 85%;
+	clear : both
+}
+
+#description {
+	font-weight : bold;
+}
+
+#author {
+	font-style : italic;
+}
+
+#date {
+	font-style : italic;
+}
+
+#attribution {
+	font-style : italic;
+}

@@ -1,4 +1,5 @@
 var express = require('express');
+var debug = require('debug')('GIFServer');
 var http = require('http');
 var path = require('path');
 var favicon = require('static-favicon');
@@ -8,7 +9,7 @@ var bodyParser = require('body-parser');
 var GIFFeed = require('GIFFeed');
 var GIF = require('./gif.js');
 
-var routes = require('./routes');
+var routes = require('./routes.js');
 
 var app = express();
 
@@ -58,7 +59,14 @@ app.use(
 
 var feed = new GIFFeed({ 'seen' : GIF.knownGIFs() });
 feed.on("GIF", GIF.handleGIF);
+feed.on("error", function(err) { console.log(err); });
 feed.load();
 setInterval(feed.load, 1800000);
 
-module.exports = app;
+app.set('port', process.env.PORT || 3000);
+var server = app.listen(
+    app.get('port'),
+    function() {
+        debug('Express server listening on port ' + server.address().port);
+    }
+);

@@ -4,8 +4,12 @@
 		<title>GIFStream</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/gif.css" />
 		<script type="text/javascript">
+			<% var c = (gif.width > gif.height) ? 'landscape' : 'portrait'; %>
+			var c = <%= c %>;
 			var loadTime = new Date();
 			var nextImage = function() {
+				if(c == "portrait")
+					document.getElementById('theGIF').height = self.innerHeight * .95;
 				var now = new Date();
 				var diff = now.getTime() - loadTime.getTime();
 				setTimeout(

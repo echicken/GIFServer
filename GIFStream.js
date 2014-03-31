@@ -8,15 +8,18 @@ var GIFStream = function(options) {
 		'feedURL' : 'http://www.reddit.com/r/gifs/.json',
 		'limit' : 100,
 		'cache' : false,
-		'SRID' : "t5_2qt55"
+		'name' : "gifs",
+		'minimumDuration' : 3000
 	}
 
 	var handleGIF = function(gif) {
+		if(gif.duration < settings.minimumDuration)
+			gif.duration = settings.minimumDuration;
 		if(settings.cache) {
 			fs.writeFile(
 				util.format(
 					"./public/%s/%s.gif",
-					settings.SRID,
+					settings.name,
 					gif.id
 				),
 				gif.gif,
@@ -28,7 +31,7 @@ var GIFStream = function(options) {
 		fs.writeFile(
 			util.format(
 				"./metadata/%s/%s.json",
-				settings.SRID,
+				settings.name,
 				gif.id
 			),
 			JSON.stringify(gif),
@@ -38,7 +41,7 @@ var GIFStream = function(options) {
 	}
 
 	var knownGIFs = function() {
-		var filenames = fs.readdirSync("./metadata/" + settings.SRID);
+		var filenames = fs.readdirSync("./metadata/" + settings.name);
 		filenames.forEach(
 			function(item, index, arr) {
 				arr[index] = item.replace(".json", "");
@@ -55,14 +58,14 @@ var GIFStream = function(options) {
 				fs.readFileSync(
 					util.format(
 						"./metadata/%s/%s.json",
-						settings.SRID,
+						settings.name,
 						id
 					)
 				)
 			);
 			gif.filename = util.format(
-				"/%s/%sgif",
-				settings.SRID,
+				"/%s/%s.gif",
+				settings.name,
 				id
 			);
 			gif.src = (settings.cache) ? gif.filename : gif.url;
@@ -78,9 +81,9 @@ var GIFStream = function(options) {
 			if(typeof settings[o] == typeof options[o])
 				settings[o] = options[o];
 		}
-		fs.mkdir("./metadata/" + settings.SRID, function(err) {});
+		fs.mkdir("./metadata/" + settings.name, function(err) {});
 		if(settings.cache)
-			fs.mkdir("./public/" + settings.SRID, function(err) {});
+			fs.mkdir("./public/" + settings.name, function(err) {});
 		var feed = new GIFFeed(
 			{	'feedURL' : settings.feedURL,
 				'limit' : settings.limit,

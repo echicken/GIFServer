@@ -10,6 +10,17 @@ var express = require('express'),
     GIFStream = require('./GIFStream.js'),
     routes = require('./routes.js');
 
+var streams = [
+    {   'name' : 'gifs',
+        'route' : "/"
+    },
+    {   'name' : 'cinemagraphs',
+        'route' : "/cinemagraphs",
+        'feedURL' : "http://www.reddit.com/r/cinemagraphs/.json",
+        'minimumDuration' : 6000
+    }
+];
+
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -52,15 +63,17 @@ app.use(
     }
 );
 
-
-var gifs = new GIFStream({ 'SRID' : "t5_2qt55" });
-
-app.get(
-    '/',
-    function(request, response) {
-        routes.random(request, response, gifs);
-    }
-);
+for(var s in streams) {
+    (function(s) {
+        var stream = new GIFStream(streams[s]);
+        app.get(
+            streams[s].route,
+            function(request, response) {
+                routes.random(request, response, stream);
+            }
+        );
+    })(s);
+}
 
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(

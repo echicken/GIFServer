@@ -4,12 +4,19 @@
 		<title>GIF Server</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/gif.css" />
 		<script type="text/javascript">
+			var loadTime = new Date();
 			var nextImage = function() {
+				var now = new Date();
+				var diff = now.getTime() - loadTime.getTime();
 				setTimeout(
 					function() {
 						location.reload();
 					},
-					<%= gif.duration %>
+					(diff > <%= gif.duration %>)
+					?
+					1
+					:
+					(<%= gif.duration %> - diff)
 				);
 			}
 		</script>

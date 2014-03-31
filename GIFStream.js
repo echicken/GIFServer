@@ -5,7 +5,7 @@ var fs = require('fs'),
 var GIFStream = function(options) {
 
 	var settings = {
-		'feedURL' : 'http://www.reddit.com/r/gifs/.json',
+		'subReddit' : '/r/gifs',
 		'limit' : 1000,
 		'cache' : false,
 		'name' : "gifs",
@@ -86,7 +86,7 @@ var GIFStream = function(options) {
 		if(settings.cache)
 			fs.mkdir("./public/" + settings.name, function(err) {});
 		var feed = new GIFFeed(
-			{	'feedURL' : settings.feedURL,
+			{	'subReddit' : settings.subReddit,
 				'limit' : settings.limit,
 				'seen' : knownGIFs(),
 				'nsfw' : settings.nsfw		

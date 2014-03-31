@@ -17,7 +17,7 @@ var streams = [
     },
     {   'name' : 'cinemagraphs',
         'route' : "/cinemagraphs",
-        'feedURL' : "http://www.reddit.com/r/cinemagraphs/.json",
+        'subReddit' : "/r/cinemagraphs",
         'minimumDuration' : 6000
     }
 ];

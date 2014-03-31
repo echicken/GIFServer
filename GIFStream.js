@@ -6,7 +6,7 @@ var GIFStream = function(options) {
 
 	var settings = {
 		'subReddit' : '/r/gifs',
-		'limit' : 1000,
+		'limit' : 100,
 		'cache' : false,
 		'name' : "gifs",
 		'minimumDuration' : 3000,

@@ -12,7 +12,8 @@ var express = require('express'),
 
 var streams = [
     {   'name' : 'gifs',
-        'route' : "/"
+        'route' : "/",
+        'nsfw' : false
     },
     {   'name' : 'cinemagraphs',
         'route' : "/cinemagraphs",

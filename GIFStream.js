@@ -9,7 +9,8 @@ var GIFStream = function(options) {
 		'limit' : 1000,
 		'cache' : false,
 		'name' : "gifs",
-		'minimumDuration' : 3000
+		'minimumDuration' : 3000,
+		'nsfw' : true
 	}
 
 	var handleGIF = function(gif) {
@@ -87,7 +88,8 @@ var GIFStream = function(options) {
 		var feed = new GIFFeed(
 			{	'feedURL' : settings.feedURL,
 				'limit' : settings.limit,
-				'seen' : knownGIFs()			
+				'seen' : knownGIFs(),
+				'nsfw' : settings.nsfw		
 			}
 		);
 		feed.on("GIF", handleGIF);

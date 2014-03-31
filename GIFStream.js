@@ -6,7 +6,7 @@ var GIFStream = function(options) {
 
 	var settings = {
 		'feedURL' : 'http://www.reddit.com/r/gifs/.json',
-		'limit' : 100,
+		'limit' : 1000,
 		'cache' : false,
 		'name' : "gifs",
 		'minimumDuration' : 3000

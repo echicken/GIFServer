@@ -23,11 +23,13 @@
 	</head>
 	<body>
 		<div id="gif">
+			<% var c = (gif.width > gif.height) ? 'landscape' : 'portrait'; %>
 		  	<img
 		  		width="<%= gif.width %>"
 		  		height="<%= gif.height %>"
 		  		src="<%= gif.src %>"
 		  		onload="nextImage()"
+				class="<%= c %>"
 		  	/>
 		<span id="description">
 			<a href="http://reddit.com<%= gif.permalink %>"><%= gif.title %></a>

@@ -22,18 +22,26 @@ a:active {
 }
 
 #gif {
-	width : 95%;
-	height : 95%;
-	position : relative
+	width : 99%;
+	height : 99%;
+	position : relative;
+	align : left;
 }
 
-#gif img { 
+#gif img {
 	display : block;
 	margin : 0 auto;
+	clear : both;
+}
+
+#gif img.portrait { 
 	width : auto;
-	max-width : 100%;
-	height : 90%;
-	clear : both
+	height : 95%;
+}
+
+#gif img.landscape {
+	width : 100%;
+	height : auto;
 }
 
 #description {

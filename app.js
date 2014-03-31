@@ -75,7 +75,7 @@ for(var s in streams) {
     })(s);
 }
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3001);
 var server = app.listen(
     app.get('port'),
     function() {

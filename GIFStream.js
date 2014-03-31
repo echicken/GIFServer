@@ -100,7 +100,7 @@ var GIFStream = function(options) {
 			}
 		);
 		feed.load();
-		setInterval(feed.load, 1800000);
+		setInterval(feed.load, 300000);
 	}
 
 	init();

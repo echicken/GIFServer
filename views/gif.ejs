@@ -19,19 +19,17 @@
 		  	<img
 		  		width="<%= gif.width %>"
 		  		height="<%= gif.height %>"
-		  		src="/<%= gif.filename %>"
+		  		src="<%= gif.src %>"
 		  		onload="nextImage()"
 		  	/>
-		<span id="description"><%= gif.title %></span>
+		<span id="description">
+			<a href="http://reddit.com<%= gif.permalink %>"><%= gif.title %></a>
+		</span>
 		<br />
 		<span id="author"><%= gif.author %></span>
 		-
 		<% var d = new Date(gif.created * 1000).toUTCString(); %>
 		<span id="date"><%= d %></span>
-		<br />
-		<span id="attribution">
-			Origin: <a href="<%= gif.url %>"><%= gif.url %></a>
-		</span>
 		</div>
 	</body>
 </html>

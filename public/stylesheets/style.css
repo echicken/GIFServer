@@ -22,5 +22,6 @@ a:active {
 }
 
 div {
+	float : left;
 	border : 1px solid white;
 }

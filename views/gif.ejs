@@ -3,22 +3,7 @@
 	<head>
 		<title>GIFStream</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/gif.css" />
-		<script type="text/javascript">
-			var loadTime = new Date().getTime();
-			var nextImage = function() {
-				var diff = (new Date().getTime()) - loadTime;
-				setTimeout(
-					function() {
-						location.reload();
-					},
-					(diff > <%= gif.duration %>)
-					?
-					1
-					:
-					(<%= gif.duration %> - diff)
-				);
-			}
-		</script>
+		<script type="text/javascript" src="/public/scripts/client.js"></script>
 	</head>
 	<body>
 		<div id="gif">

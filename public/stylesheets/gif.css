@@ -36,6 +36,7 @@ a:active {
 	width : auto;
 	height : 93%;
 	max-width : 99%;
+	object-fit : cover;
 }
 
 #description {

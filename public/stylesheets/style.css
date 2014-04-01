@@ -2,7 +2,7 @@ body {
 	background-color : black;
 	color : white;
 	padding : 1em;
-	font : 12px Helvetica, Arial, sans-serif;
+	font : 12 Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -26,4 +26,5 @@ div {
 	padding : 1em;
 	float : left;
 	border : 1px solid white;
+	font-size : 10;
 }

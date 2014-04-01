@@ -1,6 +1,7 @@
 body {
-  padding: 1em;
-  font: 12px Helvetica, Arial, sans-serif;
+	background-color: black;
+	padding: 1em;
+	font: 12px Helvetica, Arial, sans-serif;
 }
 
 a {

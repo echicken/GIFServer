@@ -28,7 +28,9 @@
 				);
 			}
 			var cancelTimeout = function(k) {
-				alert(Object.keys(k));
+				if(k.charCode != 32)
+					return;
+				alert(typeof timeout);
 			}
 			window.onkeypress = cancelTimeout;
 		</script>

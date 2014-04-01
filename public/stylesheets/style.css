@@ -3,12 +3,17 @@ body {
 	color : white;
 	font : Impact, Helvetica, Arial, sans-serif;
 	font-weight : bold;
-	font-size : 12;
+	font-size : 14;
 	text-align : center;
 }
 
 h1 {
 	font-size : 22;
+}
+
+h2 {
+	font-size : 16;
+	font-style : italic;
 }
 
 a {

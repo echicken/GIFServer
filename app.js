@@ -24,6 +24,10 @@ var streams = [
         'route' : "/spacegifs",
         'subReddit' : "/r/spacegifs",
         'minimumDuration' : 6000
+    },
+    {   'name' : 'interesting',
+        'route' : '/interesting',
+        'subReddit' : "/r/interestinggifs"
     }
 ];
 

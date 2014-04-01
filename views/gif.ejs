@@ -30,7 +30,9 @@
 			var cancelTimeout = function(k) {
 				if(k.charCode != 32)
 					return;
-				alert(typeof timeout);
+				window.clearTimeout(loadTimeout);
+				window.clearTimeout(timeout);
+				timeout = false;
 			}
 			window.onkeypress = cancelTimeout;
 		</script>

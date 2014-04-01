@@ -35,3 +35,10 @@ div {
 br {
 	clear : both;
 }
+
+.linkbox {
+	border-style : solid;
+	border-color : white;
+	border-width : 1px;
+	margin: 1em;
+}

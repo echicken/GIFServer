@@ -33,16 +33,7 @@ a:active {
 	display : block;
 	margin : 0 auto;
 	clear : both;
-}
-
-#gif img.portrait { 
 	width : auto;
-	height : 95%;
-}
-
-#gif img.landscape {
-	width : 95%;
-	height : auto;
 }
 
 #description {

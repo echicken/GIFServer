@@ -27,6 +27,12 @@
 					(<%= gif.duration %> - diff)
 				);
 			}
+			var toggleTimeout = function() {
+				if(timeout)
+					cancelTimeout;
+				else
+					location.reload();
+			}
 			var cancelTimeout = function(k) {
 				if(k.charCode != 32)
 					return;
@@ -34,7 +40,7 @@
 				window.clearTimeout(timeout);
 				timeout = false;
 			}
-			window.onkeypress = cancelTimeout;
+			window.onkeypress = toggleTimeout;
 		</script>
 	</head>
 	<body>

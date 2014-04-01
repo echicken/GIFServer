@@ -35,13 +35,18 @@
 		</script>
 	</head>
 	<body>
-		<div id="gif">
+		<div
+			id="gif"
+			style="background: url('<%= gif.src %>') no-repeat; background-size: contain;"
+		>
+			<!--
 		  	<img
 		  		src="<%= gif.src %>"
 		  		onload="queueNextImage()"
 		  		onerror="location.reload()"
 		  		onabort="location.reload()"
 		  	/>
+		  	-->
 			<span id="description">
 				<a href="http://reddit.com<%= gif.permalink %>">
 					<%= gif.title %>

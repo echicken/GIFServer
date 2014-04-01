@@ -1,7 +1,8 @@
 body {
-	background-color: black;
-	padding: 1em;
-	font: 12px Helvetica, Arial, sans-serif;
+	background-color : black;
+	color : white;
+	padding : 1em;
+	font : 12px Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -18,4 +19,8 @@ a:hover {
 a:active {
 	color : white;
 	background-color : black;
+}
+
+div {
+	border : 1px solid white;
 }

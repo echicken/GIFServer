@@ -23,8 +23,8 @@ a:active {
 }
 
 #gif {
-	width : 95%;
-	height : 95%;
+	width : 99%;
+	height : 99%;
 	position : relative;
 	align : left;
 }
@@ -34,6 +34,7 @@ a:active {
 	margin : 0 auto;
 	clear : both;
 	width : auto;
+	height : 95%;
 }
 
 #description {

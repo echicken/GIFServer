@@ -23,19 +23,17 @@
 	</head>
 	<body>
 		<div id="gif">
-		  	<img
-		  		height="100%"
-		  		src="<%= gif.src %>"
-		  		onload="nextImage()"
-		  	/>
-		<span id="description">
-			<a href="http://reddit.com<%= gif.permalink %>"><%= gif.title %></a>
-		</span>
-		<br />
-		<span id="author"><%= gif.author %></span>
-		-
-		<% var d = new Date(gif.created * 1000).toUTCString(); %>
-		<span id="date"><%= d %></span>
+		  	<img src="<%= gif.src %>" onload="nextImage()" />
+			<span id="description">
+				<a href="http://reddit.com<%= gif.permalink %>">
+					<%= gif.title %>
+				</a>
+			</span>
+			<br />
+			<span id="author"><%= gif.author %></span>
+			-
+			<% var d = new Date(gif.created * 1000).toUTCString(); %>
+			<span id="date"><%= d %></span>
 		</div>
 	</body>
 </html>

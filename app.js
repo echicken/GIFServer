@@ -28,7 +28,7 @@ var streams = [
         'route' : '/nature',
         'subReddit' : "/r/naturegifs"
     },
-    {   'name' : 'spacegifs',
+    {   'name' : 'space',
         'route' : "/spacegifs",
         'subReddit' : "/r/spacegifs",
         'minimumDuration' : 6000

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<% var imgClass = (gif.width >= gif.height) ? 'landscape' : 'portrait'; %>
 		<title>GIFStream</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/gif.css" />
 		<script type="text/javascript">
@@ -41,6 +42,7 @@
 		  		onload="queueNextImage()"
 		  		onerror="location.reload()"
 		  		onabort="location.reload()"
+		  		class = "<%= imgClass %>"
 		  	/>
 			<span id="description">
 				<a href="http://reddit.com<%= gif.permalink %>">

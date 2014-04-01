@@ -33,10 +33,19 @@ a:active {
 	display : block;
 	margin : 0 auto;
 	clear : both;
+	object-fit : cover;
+}
+
+#gif img.portrait {
 	width : auto;
 	height : 93%;
 	max-width : 99%;
-	object-fit : cover;
+}
+
+#gif img.landscape {
+	width : 99%;
+	height : auto;
+	max-height : 93%;
 }
 
 #description {

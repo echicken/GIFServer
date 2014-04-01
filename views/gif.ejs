@@ -8,7 +8,7 @@
 			var nextImage = function() {
 				var diff = (new Date()).getTime() - loadTime;
 				setTimeout(
-					location.reload,
+					location.reload(),
 					(diff > <%= gif.duration %>)
 					?
 					1
@@ -23,8 +23,8 @@
 		  	<img
 		  		src="<%= gif.src %>"
 		  		onload="nextImage()"
-		  		onerror="location.reload"
-		  		onabort="location.reload"
+		  		onerror="location.reload()"
+		  		onabort="location.reload()"
 		  	/>
 			<span id="description">
 				<a href="http://reddit.com<%= gif.permalink %>">

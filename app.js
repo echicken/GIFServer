@@ -19,6 +19,11 @@ var streams = [
         'route' : "/cinemagraphs",
         'subReddit' : "/r/cinemagraphs",
         'minimumDuration' : 6000
+    },
+    {   'name' : 'spacegifs',
+        'route' : "/spacegifs",
+        'subReddit' : "/r/spacegifs",
+        'minimumDuration' : 6000
     }
 ];
 

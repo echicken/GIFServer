@@ -27,15 +27,15 @@
 					(<%= gif.duration %> - diff)
 				);
 			}
-			var toggleTimeout = function() {
+			var toggleTimeout = function(k) {
+				if(k.charCode != 32)
+					return;
 				if(timeout)
 					cancelTimeout;
 				else
 					location.reload();
 			}
-			var cancelTimeout = function(k) {
-				if(k.charCode != 32)
-					return;
+			var cancelTimeout = function() {
 				window.clearTimeout(loadTimeout);
 				window.clearTimeout(timeout);
 				timeout = false;

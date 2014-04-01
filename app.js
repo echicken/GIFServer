@@ -20,22 +20,22 @@ var streams = [
         'subReddit' : "/r/cinemagraphs",
         'minimumDuration' : 6000
     },
+    {   'name' : 'interesting',
+        'route' : '/interesting',
+        'subReddit' : "/r/interestinggifs"
+    },
+    {   'name' : 'nature',
+        'route' : '/nature',
+        'subReddit' : "/r/naturegifs"
+    },
     {   'name' : 'spacegifs',
         'route' : "/spacegifs",
         'subReddit' : "/r/spacegifs",
         'minimumDuration' : 6000
     },
-    {   'name' : 'interesting',
-        'route' : '/interesting',
-        'subReddit' : "/r/interestinggifs"
-    },
     {   'name' : 'surreal',
         'route' : '/surreal',
         'subReddit' : "/r/SurrealGifs"
-    },
-    {   'name' : 'nature',
-        'route' : '/nature',
-        'subReddit' : "/r/naturegifs"
     }
 ];
 

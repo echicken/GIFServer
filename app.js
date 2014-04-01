@@ -12,7 +12,7 @@ var express = require('express'),
 
 var streams = [
     {   'name' : 'gifs',
-        'route' : "/",
+        'route' : "/gifs",
         'nsfw' : false
     },
     {   'name' : 'cinemagraphs',
@@ -75,6 +75,13 @@ for(var s in streams) {
         );
     })(s);
 }
+
+app.get(
+    "/",
+    function(request, response) {
+        routes.index(request, response, streams);
+    }
+);
 
 app.set('port', process.env.PORT || 3001);
 var server = app.listen(

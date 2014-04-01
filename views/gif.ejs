@@ -20,8 +20,7 @@
 			}
 			var toggleTimeout = function(k) {
 				if(k.charCode != 32) return;
-				if(timeout)	cancelTimeout();
-				else location.reload();
+				if(timeout)	cancelTimeout(); else location.reload();
 			}
 			var init = function() {
 				timeout = true;
@@ -48,9 +47,9 @@
 					<%= gif.title %>
 				</a>
 			</span>
-			<br />
+			 - 
 			<span id="author"><%= gif.author %></span>
-			-
+			 -
 			<% var d = new Date(gif.created * 1000).toUTCString(); %>
 			<span id="date"><%= d %></span>
 		</div>

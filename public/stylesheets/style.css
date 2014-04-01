@@ -1,8 +1,9 @@
 body {
 	background-color : black;
 	color : white;
-	font : 12 Helvetica, Arial, sans-serif;
+	font : Helvetica, Arial, sans-serif;
 	font-weight : bold;
+	font-size: 12;
 }
 
 h1 {

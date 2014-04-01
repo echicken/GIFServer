@@ -1,7 +1,7 @@
 body {
 	background-color : black;
 	color : white;
-	font : 12 Helvetica, Arial, sans-serif;
+	font : 14 Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -23,5 +23,8 @@ a:active {
 div {
 	padding : 1em;
 	float : left;
-	font-size : 12;
+}
+
+br {
+	clear : both;
 }

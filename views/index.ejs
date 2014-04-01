@@ -15,14 +15,12 @@
 	<br />
 	<% for(var f in feeds) { %>
 		<div>
-			<h2>
-				<a href="<%= feeds[f].route %>">
-					<%= feeds[f].name %>
-				</a> 
-			</h2>
+			<a href="<%= feeds[f].route %>">
+				<%= feeds[f].name %>
+			</a> 
 		</div>
 	<% } %>
 	<br />
-	Pro-tip: Press <spacebar> to hold a GIF, <spacebar> again to reload.
+	Pro-tip: Press [spacebar] to hold a GIF, [spacebar] again to reload.
 	</body>
 </html>

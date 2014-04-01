@@ -25,10 +25,11 @@ a:active {
 #gif {
 	width : 99%;
 	height : 99%;
-	position : relative;
-	align : left;
+/*	position : relative;
+	align : left; */
 }
 
+/*
 #gif img {
 	display : block;
 	margin : 0 auto;
@@ -37,6 +38,7 @@ a:active {
 	height : 93%;
 	max-width : 99%;
 }
+*/
 
 #description {
 	font-weight : bold;

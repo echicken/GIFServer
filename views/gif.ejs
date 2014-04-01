@@ -4,50 +4,42 @@
 		<title>GIFStream</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/gif.css" />
 		<script type="text/javascript">
-			var timeout = true;
-			var loadTimeout = setTimeout(
-				function() {
-					location.reload();
-				},
-				<%= gif.duration * 4 %>
-			);
-			var loadTime = new Date().getTime();
-			var nextImage = function() {
-				var diff = (new Date().getTime()) - loadTime;
-				if(!timeout)
-					return;
+			var timeout, loadTime, loadTimeout;
+			var queueNextImage = function() {
+				if(!timeout) return;
+				var d = (new Date().getTime()) - loadTime;
 				timeout = setTimeout(
-					function() {
-						location.reload();
-					},
-					(diff > <%= gif.duration %>)
-					?
-					1
-					:
-					(<%= gif.duration %> - diff)
+					function() { location.reload();	},
+					(d > <%= gif.duration %>) ? 1 : (<%= gif.duration %> - d)
 				);
-			}
-			var toggleTimeout = function(k) {
-				if(k.charCode != 32)
-					return;
-				if(timeout)
-					cancelTimeout();
-				else
-					location.reload();
 			}
 			var cancelTimeout = function() {
 				window.clearTimeout(loadTimeout);
 				window.clearTimeout(timeout);
 				timeout = false;
 			}
-			window.onkeypress = toggleTimeout;
+			var toggleTimeout = function(k) {
+				if(k.charCode != 32) return;
+				if(timeout)	cancelTimeout();
+				else location.reload();
+			}
+			var init = function() {
+				timeout = true;
+				loadTime = new Date().getTime();
+				loadTimeout = setTimeout(
+					function() { location.reload(); },
+					<%= gif.duration * 3 %>
+				);
+				window.onkeypress = toggleTimeout;
+			}
+			init();
 		</script>
 	</head>
 	<body>
 		<div id="gif">
 		  	<img
 		  		src="<%= gif.src %>"
-		  		onload="nextImage()"
+		  		onload="queueNextImage()"
 		  		onerror="location.reload()"
 		  		onabort="location.reload()"
 		  	/>

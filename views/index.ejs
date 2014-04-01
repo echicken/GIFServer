@@ -11,13 +11,11 @@
 	<h1>GIFStream: GIFs from Reddit</h1>
 	<br />
 	<% for(var f in feeds) { %>
-		<div>
-			<span class="linkbox">
-				<a href="<%= feeds[f].route %>">
-					<%= feeds[f].name %>
-				</a> 
-			</span>
-		</div>
+		<span class="linkbox">
+			<a href="<%= feeds[f].route %>">
+				<%= feeds[f].name %>
+			</a> 
+		</span>
 	<% } %>
 	<br />
 	<br />

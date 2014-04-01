@@ -6,9 +6,7 @@
 		<script type="text/javascript">
 			var loadTime = new Date().getTime();
 			var nextImage = function() {
-//				var now = new Date();
-//				var diff = now.getTime() - loadTime.getTime();
-				var diff = new Date().getTime() - loadTime;
+				var diff = (new Date().getTime()) - loadTime;
 				setTimeout(
 					function() {
 						location.reload();

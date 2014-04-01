@@ -9,7 +9,9 @@
 				var now = new Date();
 				var diff = now.getTime() - loadTime.getTime();
 				setTimeout(
-					location.reload,
+					function() {
+						location.reload();
+					},
 					(diff > <%= gif.duration %>)
 					?
 					1

@@ -4,9 +4,10 @@
 		<title>GIFStream</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/gif.css" />
 		<script type="text/javascript">
-			var loadTime = (new Date()).getTime();
+			var loadTime = new Date();
 			var nextImage = function() {
-				var diff = (new Date()).getTime() - loadTime;
+				var now = new Date();
+				var diff = now.getTime() - loadTime.getTime();
 				setTimeout(
 					location.reload(),
 					(diff > <%= gif.duration %>)

@@ -32,6 +32,10 @@ var streams = [
     {   'name' : 'surreal',
         'route' : '/surreal',
         'subReddit' : "/r/SurrealGifs"
+    },
+    {   'name' : 'nature',
+        'route' : '/nature',
+        'subReddit' : "/r/naturegifs"
     }
 ];
 

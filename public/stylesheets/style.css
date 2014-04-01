@@ -41,5 +41,10 @@ br {
 	border-style : solid;
 	border-color : white;
 	border-width : 1px;
-	padding: 1em;
+	padding : 1em;
+}
+
+.justTheTips {
+	margin-top : 2em;
+	text-align : center;
 }

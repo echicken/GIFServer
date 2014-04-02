@@ -17,7 +17,8 @@ var streams = [
     },
     {   'name' : 'cats',
         'route' : "/cats",
-        'nsfw' : false
+        'nsfw' : false,
+        'subReddit' : "/r/CatGifs"
     },
     {   'name' : 'cinemagraphs',
         'route' : "/cinemagraphs",

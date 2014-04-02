@@ -15,6 +15,11 @@ var streams = [
         'route' : "/gifs",
         'nsfw' : false
     },
+    {   'name' : 'cats',
+        'route' : "/cats",
+        'nsfw' : false,
+        'subReddit' : "/r/CatGifs"
+    },
     {   'name' : 'cinemagraphs',
         'route' : "/cinemagraphs",
         'subReddit' : "/r/cinemagraphs",
@@ -31,7 +36,8 @@ var streams = [
     },
     {   'name' : 'nature',
         'route' : '/nature',
-        'subReddit' : "/r/naturegifs"
+        'subReddit' : "/r/naturegifs",
+        'nsfw' : false
     },
     {   'name' : 'reactions',
         'route' : '/reactions',

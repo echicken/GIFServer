@@ -24,9 +24,18 @@ var streams = [
         'route' : '/interesting',
         'subReddit' : "/r/interestinggifs"
     },
+    {   'name' : 'loops',
+        'route' : '/loops',
+        'subReddit' : "/r/perfectloops",
+        'minimumDuration' : 6000        
+    },
     {   'name' : 'nature',
         'route' : '/nature',
         'subReddit' : "/r/naturegifs"
+    },
+    {   'name' : 'reactions',
+        'route' : '/reactions',
+        'subReddit' : '/r/reactiongifs'
     },
     {   'name' : 'space',
         'route' : "/spacegifs",
